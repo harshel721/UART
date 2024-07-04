@@ -1,0 +1,17 @@
+\doxysection{main.\+c}
+\label{main_8c_source}\index{src/main.c@{src/main.c}}
+\textbf{ Go to the documentation of this file.}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#include<stdio.h>}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include<uart\_harshel.h>}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{keywordtype}{int}\ main()\{}
+\DoxyCodeLine{00005\ \ \ \ \ configure\_baud\_rate(9600,\ 1.8432);\ \textcolor{comment}{//configure\_baud\_rate(baud\ rate,\ clock\ in\ MHz);}}
+\DoxyCodeLine{00006\ \ \ \ \ configure\_data\_width(0x01);\ \textcolor{comment}{//I've\ set\ it\ to\ 6-\/bit\ word/data\ length}}
+\DoxyCodeLine{00007\ \ \ \ \ configure\_stop\_bit(1);\ \textcolor{comment}{/*I've\ enabled\ the\ Stop-\/Bit\ and\ since\ the\ word\ length\ is\ 6,\ then\ the\ stopBit\ is\ set\ to\ 2*/}}
+\DoxyCodeLine{00008\ \ \ \ \ configure\_parity(1);\ \ }
+\DoxyCodeLine{00009\ \ \ \ \ transmit\_data(\textcolor{charliteral}{'A'});}
+\DoxyCodeLine{00010\ \ \ \ \ \textcolor{keywordtype}{char}\ data\_received\ =\ receive\_data();}
+\DoxyCodeLine{00011\ \}}
+
+\end{DoxyCode}
