@@ -66,5 +66,5 @@ void transmit_data (unsigned char transmit);
  *
  * @return data
  */
-char receive_data ();
+unsigned char receive_data ();
 
